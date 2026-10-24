@@ -203,10 +203,27 @@
       <section id="projects" class="section projects-section wrap" aria-labelledby="projects-heading">
         <p class="eyebrow">SELECTED WORK</p>
         <h2 id="projects-heading">Projects</h2>
+
+        <!-- Project Filter Tabs -->
+        <div class="project-filters" role="tablist" aria-label="Filter projects by domain">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+            All <span class="filter-count">5</span>
+          </button>
+          <button class="filter-tab" data-filter="aiml" role="tab" aria-selected="false">
+            AI &amp; ML <span class="filter-count">3</span>
+          </button>
+          <button class="filter-tab" data-filter="fullstack" role="tab" aria-selected="false">
+            Full Stack <span class="filter-count">1</span>
+          </button>
+          <button class="filter-tab" data-filter="backend" role="tab" aria-selected="false">
+            Backend &amp; APIs <span class="filter-count">1</span>
+          </button>
+        </div>
+
         <div class="projects-grid">
 
           <!-- Project 1: Air Quality -->
-          <article class="project-card" aria-labelledby="proj-aq-title">
+          <article class="project-card" data-category="fullstack" aria-labelledby="proj-aq-title">
             <figure class="project-preview aq-visual">
               <img src="assets/city-air-quality-preview.png" alt="City-level air quality dashboard showing live AQI readings, pollutant trends, a city map, forecasts, and health recommendations" loading="lazy" />
             </figure>
@@ -225,7 +242,7 @@
           </article>
 
           <!-- Project 2: Geospatial API -->
-          <article class="project-card" aria-labelledby="proj-geo-title">
+          <article class="project-card" data-category="backend" aria-labelledby="proj-geo-title">
             <div class="project-preview project-preview-placeholder geo-visual" aria-hidden="true">
               <span class="preview-label">Project preview</span>
               <span class="preview-mark">GEO</span>
@@ -245,7 +262,7 @@
           </article>
 
           <!-- Project 3: Agentic RAG -->
-          <article class="project-card rag-card" aria-labelledby="proj-rag-title">
+          <article class="project-card rag-card" data-category="aiml" aria-labelledby="proj-rag-title">
             <figure class="project-preview rag-visual">
               <img src="assets/rag-pipeline.png" alt="RAG pipeline diagram showing query, retrieve, augment, and generate stages" loading="lazy" />
             </figure>
@@ -263,7 +280,7 @@
           </article>
 
           <!-- Project 4: Voice AI -->
-          <article class="project-card" aria-labelledby="proj-voice-title">
+          <article class="project-card" data-category="aiml" aria-labelledby="proj-voice-title">
             <div class="project-preview project-preview-placeholder voice-visual" aria-hidden="true">
               <span class="preview-label">Project preview</span>
               <span class="preview-mark">VA</span>
@@ -283,7 +300,7 @@
           </article>
 
           <!-- Project 5: Sales Dashboard -->
-          <article class="project-card sales-card" aria-labelledby="proj-sales-title">
+          <article class="project-card sales-card" data-category="aiml" aria-labelledby="proj-sales-title">
             <div class="project-preview project-preview-placeholder sales-visual" aria-hidden="true">
               <span class="preview-label">Project preview</span>
               <span class="preview-mark">SF</span>

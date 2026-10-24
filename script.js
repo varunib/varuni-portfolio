@@ -86,3 +86,36 @@ if (cursor) {
     cursor.style.transform = `translate(${event.clientX}px,${event.clientY}px)`;
   });
 }
+
+
+// ── PROJECT FILTERING ──
+const filterTabs = document.querySelectorAll('.filter-tab');
+const projectCards = document.querySelectorAll('.project-card');
+
+if (filterTabs.length > 0 && projectCards.length > 0) {
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Toggle active states
+      filterTabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const filterValue = tab.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filterValue === 'all' || category === filterValue) {
+          card.classList.remove('is-filtered-out');
+          card.classList.remove('is-animating');
+          void card.offsetWidth; // Trigger reflow for smooth animation
+          card.classList.add('is-animating');
+        } else {
+          card.classList.add('is-filtered-out');
+        }
+      });
+    });
+  });
+}
