@@ -119,3 +119,50 @@ if (filterTabs.length > 0 && projectCards.length > 0) {
     });
   });
 }
+
+
+// ── RESUME MODAL ──
+const resumeModal = document.querySelector('#resume-modal');
+const resumeTriggers = document.querySelectorAll('.resume-trigger');
+const modalCloseBtn = document.querySelector('.modal-close');
+
+if (resumeModal && resumeTriggers.length > 0) {
+  const openModal = () => {
+    resumeModal.hidden = false;
+    requestAnimationFrame(() => {
+      resumeModal.classList.add('is-open');
+      document.body.classList.add('modal-open');
+    });
+  };
+
+  const closeModal = () => {
+    resumeModal.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    setTimeout(() => {
+      resumeModal.hidden = true;
+    }, 250);
+  };
+
+  resumeTriggers.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeModal);
+  }
+
+  resumeModal.addEventListener('click', e => {
+    if (e.target === resumeModal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !resumeModal.hidden) {
+      closeModal();
+    }
+  });
+}
