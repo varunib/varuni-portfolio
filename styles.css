@@ -474,3 +474,36 @@ a.contact-card-value:hover{color:#f3b465}
 body.modal-open {
   overflow: hidden;
 }
+
+
+/* ── ROLE ROTATOR & TYPEWRITER ── */
+.hero-role {
+  font-size: 19px;
+  font-weight: 600;
+  color: #d1d6df;
+  margin: 0 0 20px;
+  min-height: 28px;
+}
+
+.hero-role .role-rotator {
+  color: #f1f3f7;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.hero-role .role-cursor {
+  display: inline-block;
+  width: 2.5px;
+  height: 1.15em;
+  background: var(--accent);
+  vertical-align: -2.5px;
+  margin-left: 4px;
+  border-radius: 1px;
+  animation: cursorBlink 0.85s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}

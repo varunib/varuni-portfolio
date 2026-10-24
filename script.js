@@ -166,3 +166,52 @@ if (resumeModal && resumeTriggers.length > 0) {
     }
   });
 }
+
+
+// ── HERO ROLE TYPEWRITER ──
+const roleRotator = document.querySelector('#role-rotator');
+if (roleRotator && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const roles = [
+    'Software Engineer',
+    'Applied AI & ML Developer',
+    'Full-Stack Web Builder',
+    'Backend & API Specialist'
+  ];
+  let roleIndex = 0;
+  let charIndex = roles[0].length;
+  let isDeleting = true;
+
+  const typeSpeed = 70;
+  const deleteSpeed = 35;
+  const pauseBetween = 2200;
+
+  const tick = () => {
+    const currentRole = roles[roleIndex];
+
+    if (isDeleting) {
+      charIndex--;
+      roleRotator.textContent = currentRole.substring(0, charIndex);
+    } else {
+      charIndex++;
+      roleRotator.textContent = currentRole.substring(0, charIndex);
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      isDeleting = true;
+      setTimeout(tick, pauseBetween);
+      return;
+    }
+
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(tick, 300);
+      return;
+    }
+
+    const nextDelay = isDeleting ? deleteSpeed : typeSpeed;
+    setTimeout(tick, nextDelay);
+  };
+
+  setTimeout(tick, pauseBetween);
+}
