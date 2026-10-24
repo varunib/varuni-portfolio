@@ -3,59 +3,354 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Varuni Bennur — Software Engineer and AI/ML Developer." />
+    <meta name="description" content="Varuni Bennur — Information Science & Engineering graduate building full-stack applications, backend systems, and applied AI/ML solutions. Based in Bengaluru, India." />
+    <meta property="og:title" content="Varuni Bennur | Software Engineer & AI/ML Developer" />
+    <meta property="og:description" content="Portfolio of Varuni Bennur — full-stack development, backend systems, and applied AI/ML." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
     <title>Varuni Bennur | Software Engineer & AI/ML Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="glow glow-one"></div><div class="glow glow-two"></div><div class="cursor-glow" aria-hidden="true"></div>
-    <header class="nav wrap">
-      <a class="brand" href="#top" aria-label="Varuni Bennur home" style="font-size:23px;letter-spacing:-.04em">Varuni Bennur<span>.</span></a>
-      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-      <a class="nav-link" href="https://github.com/varunib" target="_blank" rel="noreferrer">GitHub ↗</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <header class="nav" role="banner">
+      <div class="nav-inner wrap">
+        <a class="brand" href="#top" aria-label="Varuni Bennur — home">Varuni Bennur<span class="brand-dot">.</span></a>
+        <nav aria-label="Main navigation" id="main-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="nav-gh" href="https://github.com/varunib" target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub ↗</a>
+          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </header>
+
     <main id="top">
-      <section class="hero wrap">
-        <p class="eyebrow">AVAILABLE FOR SOFTWARE & AI/ML ROLES</p>
-        <h1>Building useful systems<br />with <em>clarity</em> &amp; intelligence.</h1>
-        <div class="hero-bottom">
-          <p class="intro">I’m Varuni Bennur, a software engineer focused on scalable web applications, cloud-native backend systems, and AI-powered products.</p>
-          <a class="button" href="#work">Explore my work <span>↓</span></a>
+
+      <!-- HERO -->
+      <section class="hero wrap" aria-labelledby="hero-heading">
+        <div class="hero-layout">
+          <div class="hero-portrait-card">
+            <img class="hero-portrait" src="assets/varuni-profile.png" alt="Varuni Bennur smiling outdoors" fetchpriority="high" />
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">INFORMATION SCIENCE &amp; ENGINEERING · BENGALURU, INDIA</p>
+            <h1 id="hero-heading">Varuni<br /><span class="hero-name-last">Bennur</span><span class="hero-name-dot">.</span></h1>
+            <p class="hero-role">Software Engineer <span>·</span> Applied AI/ML</p>
+            <p class="hero-intro">I'm Varuni Bennur — an ISE graduate focused on full-stack development, backend systems, and applied AI/ML. I build things that are reliable, purposeful, and a little smarter.</p>
+            <blockquote class="hero-quote">
+              <p>“Build with logic. Create with purpose.”</p>
+              <footer>Where engineering meets real-world impact.</footer>
+            </blockquote>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">View Projects <span aria-hidden="true">↓</span></a>
+              <a class="btn btn-outline" href="mailto:varunibennur7@gmail.com?subject=Resume%20request">Request Resume</a>
+              <a class="btn btn-ghost" href="#contact">Contact Me</a>
+            </div>
+            <div class="hero-links">
+              <a href="https://github.com/varunib" target="_blank" rel="noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="status"><span></span> Based in Bengaluru, India</div>
       </section>
 
-      <section class="marquee" aria-label="Technical skills"><div class="skill-scroll">PYTHON <i>✦</i> JAVA <i>✦</i> JAVASCRIPT <i>✦</i> HTML <i>✦</i> CSS <i>✦</i> SQL <i>✦</i> FASTAPI <i>✦</i> FLASK <i>✦</i> NODE.JS <i>✦</i> EXPRESS.JS <i>✦</i> REST API <i>✦</i> REACT <i>✦</i> AWS <i>✦</i> DOCKER <i>✦</i> MYSQL <i>✦</i> CHROMADB <i>✦</i> POSTMAN <i>✦</i> RAG <i>✦</i> LLM <i>✦</i> LANGCHAIN <i>✦</i> LANGGRAPH <i>✦</i> DATA STRUCTURES <i>✦</i> OPERATING SYSTEMS <i>✦</i> COMPUTER NETWORKS <i>✦</i> PYTHON <i>✦</i> JAVA <i>✦</i> JAVASCRIPT <i>✦</i> HTML <i>✦</i> CSS <i>✦</i> SQL <i>✦</i> FASTAPI <i>✦</i> FLASK <i>✦</i> NODE.JS <i>✦</i> EXPRESS.JS <i>✦</i> REST API <i>✦</i> REACT <i>✦</i> AWS <i>✦</i> DOCKER <i>✦</i> MYSQL <i>✦</i> CHROMADB <i>✦</i> POSTMAN <i>✦</i> RAG <i>✦</i> LLM <i>✦</i> LANGCHAIN <i>✦</i> LANGGRAPH <i>✦</i> DATA STRUCTURES <i>✦</i> OPERATING SYSTEMS <i>✦</i> COMPUTER NETWORKS <i>✦</i></div></section>
+      <!-- SKILLS MARQUEE -->
+      <div class="marquee" aria-label="Technical skills overview" role="marquee">
+        <div class="marquee-track">PYTHON <i>✦</i> JAVASCRIPT <i>✦</i> JAVA <i>✦</i> SQL <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> FASTAPI <i>✦</i> FLASK <i>✦</i> EXPRESS.JS <i>✦</i> MYSQL <i>✦</i> MONGODB <i>✦</i> CHROMADB <i>✦</i> RAG <i>✦</i> LANGGRAPH <i>✦</i> LANGCHAIN <i>✦</i> LSTM <i>✦</i> SCIKIT-LEARN <i>✦</i> STREAMLIT <i>✦</i> DOCKER <i>✦</i> AWS <i>✦</i> GIT <i>✦</i> POSTMAN <i>✦</i> PYTHON <i>✦</i> JAVASCRIPT <i>✦</i> JAVA <i>✦</i> SQL <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> FASTAPI <i>✦</i> FLASK <i>✦</i> EXPRESS.JS <i>✦</i> MYSQL <i>✦</i> MONGODB <i>✦</i> CHROMADB <i>✦</i> RAG <i>✦</i> LANGGRAPH <i>✦</i> LANGCHAIN <i>✦</i> LSTM <i>✦</i> SCIKIT-LEARN <i>✦</i> STREAMLIT <i>✦</i> DOCKER <i>✦</i> AWS <i>✦</i> GIT <i>✦</i> POSTMAN <i>✦</i></div>
+      </div>
 
-      <section id="work" class="wrap section">
-        <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Things I’ve<br />brought to life.</h2></div>
-        <div class="projects">
-          <article class="project featured">
-            <div class="project-visual cloud"><div class="orbit o1"></div><div class="orbit o2"></div><div class="cloud-icon">☁</div><div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><span class="pulse-ring"></span><span class="cloud-caption">EVENT-DRIVEN / ONLINE</span></div>
-            <div class="project-copy"><div><p class="project-number">01 / CLOUD SYSTEMS</p><h3>Cloud-Based<br />Microservices Platform</h3></div><p class="project-text">A cloud-native backend platform designed around secure REST APIs, event-driven services, containers, and observable infrastructure.</p><div class="tags"><span>FastAPI</span><span>Kafka</span><span>Docker</span><span>Kubernetes</span><span>AWS</span></div></div>
-          </article>
-          <article class="project">
-            <div class="project-visual air"><span class="aqi-label">LIVE AQI</span><div class="aqi">72<small>moderate</small></div><div class="chart"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><span class="air-route"></span></div>
-            <div class="project-copy"><div><p class="project-number">02 / DATA + ML</p><h3>City-Level Air Quality<br />Monitoring &amp; Forecasting</h3></div><p class="project-text">A full-stack dashboard for real-time AQI tracking across cities, with live data integration and 24–48 hour forecast visualization.</p><div class="project-actions"><div class="tags"><span>React</span><span>Node.js</span><span>ML</span></div><a href="https://github.com/varunib/City-Level-Air-Quality-Monitoring-and-Forecasting" target="_blank" rel="noreferrer">View code ↗</a></div></div>
-          </article>
-          <article class="project">
-            <div class="project-visual ai"><div class="ai-workflow"><div class="prompt"><small>PRODUCT DESCRIPTION</small>Ultra-light coffee tumbler for busy mornings<span>_</span></div><div class="generate-chip">✦ GENERATING AD COPY</div><div class="ad-output"><div class="ad-image"><span>☕</span></div><div class="ad-copy"><small>YOUR NEW DAILY RITUAL</small><strong>Great coffee.<br/>Anywhere.</strong><p>Hot for hours. Made for your move.</p></div></div></div><div class="spark">✦</div></div>
-            <div class="project-copy"><div><p class="project-number">03 / GENERATIVE AI</p><h3>AI Ad Copy<br />Generator</h3></div><p class="project-text">An AI tool that turns product descriptions into compelling marketing copy using dynamic prompting, Llama 3.3, and the Groq API.</p><div class="tags"><span>Python</span><span>Flask</span><span>Llama 3.3</span><span>Groq</span></div></div>
-          </article>
-          <article class="project"><div class="project-visual rag"><svg class="rag-lines" viewBox="0 0 610 438" preserveAspectRatio="none" aria-hidden="true"><line x1="94" y1="67" x2="305" y2="219"/><line x1="534" y1="82" x2="305" y2="219"/><line x1="94" y1="365" x2="305" y2="219"/></svg><div class="rag-core">RAG</div><div class="rag-node r1">Retrieve</div><div class="rag-node r2">Reason</div><div class="rag-node r3">Answer</div></div><div class="project-copy"><div><p class="project-number">04 / AGENTIC AI</p><h3>Agentic RAG<br />Knowledge Platform</h3></div><p class="project-text">A knowledge platform built around agentic retrieval-augmented generation, enabling context-aware retrieval and intelligent responses over a knowledge base.</p><div class="project-actions"><div class="tags"><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>ChromaDB</span></div><a href="https://github.com/varunib/agentic-rag-knowledge-platform" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
-          <article class="project"><div class="project-visual sales"><p>FORECAST / NEXT MONTH</p><strong>+18.4%</strong><div class="sales-line"><i></i><i></i><i></i><i></i><i></i><i></i></div><span>ML PREDICTION</span></div><div class="project-copy"><div><p class="project-number">05 / APPLIED MACHINE LEARNING</p><h3>AI-Powered Sales Analytics<br />&amp; Forecasting Dashboard</h3></div><p class="project-text">An interactive BI dashboard that analyzes 10,000+ retail sales records with dynamic filters and live LSTM time-series forecasts for data-driven decisions.</p><div class="tags"><span>Python</span><span>Streamlit</span><span>Plotly</span><span>LSTM</span><span>Pandas</span><span>NumPy</span></div></div></article>
+      <!-- ABOUT -->
+      <section id="about" class="section about-section wrap" aria-labelledby="about-heading">
+        <p class="eyebrow">ABOUT ME</p>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 id="about-heading">Engineering reliable software,<br />then making it a little more <em>intelligent.</em></h2>
+            <p>I'm an Information Science and Engineering graduate from Bengaluru, India. I enjoy working at the intersection of strong software engineering and practical AI — building full-stack applications, designing backend APIs, and applying machine learning where it genuinely adds value.</p>
+            <p>I've worked as a Python and Web Developer Intern, contributed to real-world projects involving REST APIs, data pipelines, and model evaluation, and built personal projects spanning air quality forecasting, agentic RAG systems, voice AI, and sales analytics.</p>
+            <div class="about-actions">
+              <a class="btn btn-primary" href="mailto:varunibennur7@gmail.com?subject=Resume%20request">Request Resume</a>
+              <a class="btn btn-outline" href="mailto:varunibennur7@gmail.com">Get in Touch</a>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-stat"><span class="stat-label">Degree</span><span class="stat-value">B.E. Information Science &amp; Engineering</span></div>
+            <div class="about-stat"><span class="stat-label">University</span><span class="stat-value">Visvesvaraya Technological University</span></div>
+            <div class="about-stat"><span class="stat-label">Location</span><span class="stat-value">Bengaluru, India</span></div>
+            <div class="about-stat"><span class="stat-label">Focus</span><span class="stat-value">Full-Stack · Backend · Applied AI/ML</span></div>
+            <div class="about-stat"><span class="stat-label">Email</span><span class="stat-value"><a href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com</a></span></div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="about"><div class="wrap about-grid"><p class="eyebrow">ABOUT ME</p><div><h2>Engineering reliable software, then giving it a little more <em>intelligence.</em></h2><p>I enjoy working where strong software engineering meets practical AI. From interfaces people enjoy using to backend systems that scale, I bring a thoughtful, end-to-end approach to building products.</p><a class="text-link" href="mailto:varunibennur7@gmail.com">Let’s talk <span>→</span></a></div></div></section>
+      <!-- SKILLS -->
+      <section id="skills" class="section skills-section wrap" aria-labelledby="skills-heading">
+        <div class="skills-heading">
+          <div>
+            <p class="eyebrow">TOOLS I WORK WITH</p>
+            <h2 id="skills-heading">The <em>Stack</em></h2>
+          </div>
+          <p class="skills-intro">A focused stack spanning full-stack engineering, applied machine learning, and deployment.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Programming Languages</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Py</span></span><span class="skill-label">Python</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">JS</span></span><span class="skill-label">JavaScript</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">J</span></span><span class="skill-label">Java</span></div>
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">SQL</span></span><span class="skill-label">SQL</span></div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend Development</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Re</span></span><span class="skill-label">React.js</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">HTML</span></span><span class="skill-label">HTML5</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">CSS</span></span><span class="skill-label">CSS3</span></div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Backend Development</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">FA</span></span><span class="skill-label">FastAPI</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Fl</span></span><span class="skill-label">Flask</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Node</span></span><span class="skill-label">Node.js + Express.js</span></div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; Machine Learning</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">ML</span></span><span class="skill-label">Machine Learning</span></div>
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">RAG</span></span><span class="skill-label">RAG Systems</span></div>
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">LG</span></span><span class="skill-label">LangGraph</span></div>
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">IR</span></span><span class="skill-label">ChromaDB + Sentence Transformers</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">ML</span></span><span class="skill-label">Scikit-learn + TensorFlow / Keras</span></div>
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">AI</span></span><span class="skill-label">Groq API + OpenAI Whisper</span></div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">PG</span></span><span class="skill-label">PostgreSQL / Supabase</span></div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data Science &amp; Visualization</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Pd</span></span><span class="skill-label">Pandas</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Np</span></span><span class="skill-label">NumPy</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Pl</span></span><span class="skill-label">Plotly</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">St</span></span><span class="skill-label">Streamlit</span></div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; Deployment</h3>
+            <div class="skill-tiles">
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Git</span></span><span class="skill-label">Git &amp; GitHub</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Dk</span></span><span class="skill-label">Docker</span></div>
+              <div class="skill-tile"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">PM</span></span><span class="skill-label">Postman</span></div>
+              <div class="skill-tile"><span class="skill-icon"><span class="skill-icon-fallback">V</span></span><span class="skill-label">Vercel</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section class="wrap capabilities section"><p class="eyebrow">TECHNICAL TOOLKIT</p><div class="skills-grid"><div class="skill-group"><h3>Languages</h3><p>Python · Java · JavaScript (ES6+) · SQL</p></div><div class="skill-group"><h3>Backend</h3><p>FastAPI · Flask · Node.js · Express.js · REST APIs · JWT Authentication · Microservices</p></div><div class="skill-group"><h3>Frontend</h3><p>React.js · HTML5 · CSS3</p></div><div class="skill-group"><h3>Databases</h3><p>PostgreSQL · MySQL · MongoDB · ChromaDB · Redis</p></div><div class="skill-group"><h3>AI &amp; Machine Learning</h3><p>LangChain · LangGraph · RAG · Llama 3 · Groq API · Sentence Transformers</p></div><div class="skill-group"><h3>Cloud &amp; Platform</h3><p>Docker · Kubernetes · AWS / Azure / GCP · Apache Kafka · Prometheus · Grafana</p></div><div class="skill-group"><h3>Control &amp; CI/CD</h3><p>Git · GitHub · Jenkins · GitHub Actions</p></div><div class="skill-group"><h3>Core Concepts</h3><p>OOP · Data Structures &amp; Algorithms · Distributed Systems · Microservices · Linux</p></div></div></section>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section experience-section wrap" aria-labelledby="exp-heading">
+        <p class="eyebrow">WORK EXPERIENCE</p>
+        <h2 id="exp-heading">Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period">Feb 2026 – May 2026</span>
+              <span class="timeline-type">Internship</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Python &amp; Web Developer Intern</h3>
+              <p class="timeline-org">Contriver · Bengaluru, India</p>
+              <ul class="timeline-points">
+                <li>Developed and maintained backend services using Python and Flask, building REST APIs consumed by frontend React.js applications.</li>
+                <li>Worked with Node.js and Express.js for server-side logic and API integration.</li>
+                <li>Performed data processing tasks including cleaning, transformation, and preparation for model evaluation pipelines.</li>
+                <li>Conducted testing and debugging of API endpoints using Postman; maintained version control with Git and GitHub.</li>
+              </ul>
+              <div class="timeline-tags"><span>Python</span><span>Flask</span><span>React.js</span><span>Node.js</span><span>REST APIs</span><span>Postman</span><span>Git</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <section id="contact" class="contact wrap"><p class="eyebrow">HAVE A ROLE OR IDEA IN MIND?</p><h2>Let’s build<br /><em>something real.</em></h2><a class="email" href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com <span>↗</span></a><div class="contact-links"><a href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/varunib" target="_blank" rel="noreferrer">GitHub ↗</a><span>© 2026 Varuni Bennur</span></div></section>
+      <!-- PROJECTS -->
+      <section id="projects" class="section projects-section wrap" aria-labelledby="projects-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2 id="projects-heading">Projects</h2>
+        <div class="projects-grid">
+
+          <!-- Project 1: Air Quality -->
+          <article class="project-card" aria-labelledby="proj-aq-title">
+            <figure class="project-preview aq-visual">
+              <img src="assets/city-air-quality-preview.png" alt="City-level air quality dashboard showing live AQI readings, pollutant trends, a city map, forecasts, and health recommendations" loading="lazy" />
+            </figure>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Full stack · data visualization</span>
+              </div>
+              <h3 id="proj-aq-title">City-Level Air Quality Monitoring &amp; Forecasting</h3>
+              <p>A full-stack application for monitoring city-level air quality, analyzing pollutant concentrations, and exploring air-quality forecasts and health recommendations.</p>
+              <div class="project-tags"><span>React</span><span>Node.js</span><span>Express.js</span><span>Open-Meteo API</span></div>
+              <div class="project-links">
+                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/City-Level-Air-Quality-Monitoring-and-Forecasting" target="_blank" rel="noopener noreferrer" aria-label="View Air Quality Monitoring project on GitHub">GitHub ↗</a>
+                <a class="btn btn-sm btn-primary" href="https://city-level-air-quality-monitoring-a-lilac.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Air Quality Monitoring live demo">Live Demo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Geospatial API -->
+          <article class="project-card" aria-labelledby="proj-geo-title">
+            <div class="project-preview project-preview-placeholder geo-visual" aria-hidden="true">
+              <span class="preview-label">Project preview</span>
+              <span class="preview-mark">GEO</span>
+              <span class="preview-caption">Screenshot not available</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Backend API</span>
+              </div>
+              <h3 id="proj-geo-title">Geospatial Measurement API</h3>
+              <p>A FastAPI service that accepts KML and zipped Shapefiles, extracts geographic features, and returns metric area or length measurements. Detects coordinate reference systems and reprojects geographic data before measuring.</p>
+              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>GeoPandas</span><span>Shapely</span><span>PyProj</span><span>KML</span></div>
+              <div class="project-links">
+                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/geospatial-measurement-api" target="_blank" rel="noreferrer" aria-label="View Geospatial Measurement API on GitHub">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Agentic RAG -->
+          <article class="project-card rag-card" aria-labelledby="proj-rag-title">
+            <figure class="project-preview rag-visual">
+              <img src="assets/rag-pipeline.png" alt="RAG pipeline diagram showing query, retrieve, augment, and generate stages" loading="lazy" />
+            </figure>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Agentic AI</span>
+              </div>
+              <h3 id="proj-rag-title">Agentic RAG Knowledge Platform</h3>
+              <p>Upload documents and get cited answers through a LangGraph workflow that routes questions to document retrieval or tools such as web search, CSV analysis, SQL, and calculations. Retrieval combines ChromaDB, BM25, and reranking.</p>
+              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>ChromaDB</span><span>BM25</span><span>Groq</span></div>
+              <div class="project-links">
+                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/agentic-rag-knowledge-platform" target="_blank" rel="noreferrer" aria-label="View Agentic RAG Knowledge Platform on GitHub">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Voice AI -->
+          <article class="project-card" aria-labelledby="proj-voice-title">
+            <div class="project-preview project-preview-placeholder voice-visual" aria-hidden="true">
+              <span class="preview-label">Project preview</span>
+              <span class="preview-mark">VA</span>
+              <span class="preview-caption">Screenshot not available</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Voice AI</span>
+              </div>
+              <h3 id="proj-voice-title">Voice AI Personal Assistant</h3>
+              <p>A configurable missed-call assistant for small businesses. Owners define conversation workflows and actions; the assistant can follow up by text or voice, collect information, and manage appointments through Google Calendar.</p>
+              <div class="project-tags"><span>AI workflows</span><span>Text &amp; voice</span><span>OpenAI Whisper</span><span>Google Calendar</span></div>
+              <div class="project-links">
+                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/Voice-AI-Personal-Assistant" target="_blank" rel="noreferrer" aria-label="View Voice AI Personal Assistant on GitHub">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Sales Dashboard -->
+          <article class="project-card sales-card" aria-labelledby="proj-sales-title">
+            <div class="project-preview project-preview-placeholder sales-visual" aria-hidden="true">
+              <span class="preview-label">Project preview</span>
+              <span class="preview-mark">SF</span>
+              <span class="preview-caption">Screenshot not available</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Applied ML · retail analytics</span>
+                <span class="project-status">Not yet deployed</span>
+              </div>
+              <h3 id="proj-sales-title">AI-Powered Sales Analytics &amp; Forecasting Dashboard</h3>
+              <p>A Streamlit dashboard for exploring weekly retail sales by store and generating configurable LSTM forecasts. Includes forecast and training controls, sales visualizations, and model error metrics.</p>
+              <div class="project-tags"><span>Python</span><span>Streamlit</span><span>TensorFlow/Keras</span><span>Scikit-learn</span><span>Plotly</span><span>Pandas</span></div>
+              <div class="project-links">
+                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/AI-Powered-Sales-Analytics-Forecasting-Dashboard" target="_blank" rel="noreferrer" aria-label="View Sales Analytics and Forecasting Dashboard on GitHub">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact-section wrap" aria-labelledby="contact-heading">
+        <div class="contact-panel">
+          <div class="contact-intro">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2 id="contact-heading">Let's <em>connect.</em></h2>
+            <p class="contact-sub">I’m always glad to connect about software development, Python, AI/ML, full-stack engineering, and relevant opportunities. If there’s a problem worth solving, I’d love to hear about it.</p>
+          </div>
+          <div class="contact-methods" aria-label="Contact methods">
+            <div class="contact-card contact-email-card">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div class="contact-card-copy">
+                <span class="contact-card-label">EMAIL</span>
+                <a class="contact-card-value" href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com</a>
+              </div>
+            </div>
+            <a class="contact-card contact-profile-card" href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18H5.67V9.4h2.67ZM7 8.22a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1ZM18.33 18h-2.66v-4.18c0-1-.02-2.29-1.4-2.29s-1.61 1.1-1.61 2.22V18H10V9.4h2.56v1.17h.04a2.8 2.8 0 0 1 2.52-1.39c2.7 0 3.21 1.78 3.21 4.1Z"/></svg>
+              </span>
+              <span class="contact-card-copy">
+                <span class="contact-card-label">PROFESSIONAL PROFILE</span>
+                <span class="contact-card-value">LinkedIn</span>
+              </span>
+              <span class="contact-card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-card contact-profile-card" href="https://github.com/varunib" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.51 0-1.22.44-2.22 1.15-3-.12-.29-.5-1.43.11-2.97 0 0 .94-.3 3.06 1.15a10.6 10.6 0 0 1 5.57 0c2.13-1.45 3.06-1.15 3.06-1.15.61 1.54.23 2.68.11 2.97.72.78 1.15 1.78 1.15 3 0 4.28-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+              </span>
+              <span class="contact-card-copy">
+                <span class="contact-card-label">CODE &amp; PROJECTS</span>
+                <span class="contact-card-value">GitHub</span>
+              </span>
+              <span class="contact-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="contact-resume"><a href="mailto:varunibennur7@gmail.com?subject=Resume%20request">Looking for my resume? Request a copy <span aria-hidden="true">↗</span></a></p>
+          <p class="footer-copy">© 2026 Varuni Bennur · Built with care.</p>
+        </div>
+      </section>
+
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
