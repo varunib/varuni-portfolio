@@ -251,10 +251,48 @@
 
           <!-- Project 2: Geospatial API -->
           <article class="project-card" data-category="backend" aria-labelledby="proj-geo-title">
-            <div class="project-preview project-preview-placeholder geo-visual" aria-hidden="true">
-              <span class="preview-label">Project preview</span>
-              <span class="preview-mark">GEO</span>
-              <span class="preview-caption">Screenshot not available</span>
+            <div class="project-preview geo-visual arch-preview" role="img" aria-label="Geospatial API architecture diagram: KML or zipped Shapefile input to PyProj coordinate reprojection, Shapely metric calculation, and GeoJSON response">
+              <div class="arch-header">
+                <span class="arch-badge geo-badge"><span class="arch-dot geo-dot"></span> PIPELINE ARCHITECTURE</span>
+                <span class="arch-tag">FastAPI · EPSG:3857</span>
+              </div>
+              <div class="arch-flow">
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg>
+                  </div>
+                  <span class="node-title">KML / ZIP</span>
+                  <span class="node-sub">Vector Input</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  </div>
+                  <span class="node-title">PyProj CRS</span>
+                  <span class="node-sub">Auto-Reproject</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 22 22 22"></polygon></svg>
+                  </div>
+                  <span class="node-title">Shapely</span>
+                  <span class="node-sub">Area &amp; Length</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  </div>
+                  <span class="node-title">GeoJSON</span>
+                  <span class="node-sub">Metric Output</span>
+                </div>
+              </div>
+              <div class="arch-footer">
+                <span class="arch-metric">Sub-millisecond geodesic computation</span>
+                <span class="arch-lang">Python 3.11</span>
+              </div>
             </div>
             <div class="project-content">
               <div class="project-meta">
@@ -289,10 +327,48 @@
 
           <!-- Project 4: Voice AI -->
           <article class="project-card" data-category="aiml" aria-labelledby="proj-voice-title">
-            <div class="project-preview project-preview-placeholder voice-visual" aria-hidden="true">
-              <span class="preview-label">Project preview</span>
-              <span class="preview-mark">VA</span>
-              <span class="preview-caption">Screenshot not available</span>
+            <div class="project-preview voice-visual arch-preview" role="img" aria-label="Voice AI assistant architecture diagram: audio call to OpenAI Whisper STT, conversational agent routing, and calendar booking + SMS">
+              <div class="arch-header">
+                <span class="arch-badge voice-badge"><span class="arch-dot voice-dot"></span> WORKFLOW ARCHITECTURE</span>
+                <span class="arch-tag">Whisper · Groq · Agentic</span>
+              </div>
+              <div class="arch-flow">
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <span class="node-title">Missed Call</span>
+                  <span class="node-sub">Voice Stream</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                  </div>
+                  <span class="node-title">Whisper STT</span>
+                  <span class="node-sub">Audio to Text</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <span class="node-title">LLM Intent</span>
+                  <span class="node-sub">Action Router</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  </div>
+                  <span class="node-title">G-Calendar</span>
+                  <span class="node-sub">SMS &amp; Booking</span>
+                </div>
+              </div>
+              <div class="arch-footer">
+                <span class="arch-metric">End-to-end voice-to-appointment automation</span>
+                <span class="arch-lang">Twilio + OpenAI</span>
+              </div>
             </div>
             <div class="project-content">
               <div class="project-meta">
@@ -309,10 +385,48 @@
 
           <!-- Project 5: Sales Dashboard -->
           <article class="project-card sales-card" data-category="aiml" aria-labelledby="proj-sales-title">
-            <div class="project-preview project-preview-placeholder sales-visual" aria-hidden="true">
-              <span class="preview-label">Project preview</span>
-              <span class="preview-mark">SF</span>
-              <span class="preview-caption">Screenshot not available</span>
+            <div class="project-preview sales-visual arch-preview" role="img" aria-label="Sales forecasting architecture diagram: retail data to lag feature engineering, LSTM deep learning neural network, and Streamlit Plotly forecast">
+              <div class="arch-header">
+                <span class="arch-badge sales-badge"><span class="arch-dot sales-dot"></span> ML PIPELINE ARCHITECTURE</span>
+                <span class="arch-tag">LSTM · TensorFlow · Plotly</span>
+              </div>
+              <div class="arch-flow">
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  </div>
+                  <span class="node-title">Store Data</span>
+                  <span class="node-sub">Weekly Sales</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line></svg>
+                  </div>
+                  <span class="node-title">Feature Eng</span>
+                  <span class="node-sub">Lags &amp; Scalers</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><circle cx="4" cy="6" r="2"></circle><circle cx="4" cy="18" r="2"></circle><circle cx="20" cy="6" r="2"></circle><circle cx="20" cy="18" r="2"></circle><line x1="6" y1="7" x2="9.5" y2="10.5"></line><line x1="6" y1="17" x2="9.5" y2="13.5"></line><line x1="14.5" y1="10.5" x2="18" y2="7"></line><line x1="14.5" y1="13.5" x2="18" y2="17"></line></svg>
+                  </div>
+                  <span class="node-title">LSTM Network</span>
+                  <span class="node-sub">Sequence Model</span>
+                </div>
+                <div class="arch-arrow" aria-hidden="true">→</div>
+                <div class="arch-node">
+                  <div class="node-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  </div>
+                  <span class="node-title">Forecast</span>
+                  <span class="node-sub">Streamlit Plotly</span>
+                </div>
+              </div>
+              <div class="arch-footer">
+                <span class="arch-metric">Multi-horizon sales demand forecasting</span>
+                <span class="arch-lang">Streamlit + Keras</span>
+              </div>
             </div>
             <div class="project-content">
               <div class="project-meta">
