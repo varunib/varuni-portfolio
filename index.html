@@ -334,47 +334,117 @@
       <!-- CONTACT -->
       <section id="contact" class="section contact-section wrap" aria-labelledby="contact-heading">
         <div class="contact-panel">
-          <div class="contact-intro">
-            <p class="eyebrow">GET IN TOUCH</p>
-            <h2 id="contact-heading">Let's <em>connect.</em></h2>
-            <p class="contact-sub">I’m always glad to connect about software development, Python, AI/ML, full-stack engineering, and relevant opportunities. If there’s a problem worth solving, I’d love to hear about it.</p>
-          </div>
-          <div class="contact-methods" aria-label="Contact methods">
-            <div class="contact-card contact-email-card">
-              <span class="contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <div class="contact-card-copy">
-                <span class="contact-card-label">EMAIL</span>
-                <a class="contact-card-value" href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com</a>
+          <div class="contact-grid">
+            <div class="contact-info-side">
+              <div class="contact-intro">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h2 id="contact-heading">Let's <em>connect.</em></h2>
+                <p class="contact-sub">I'm actively looking for software engineering, full-stack, and AI/ML opportunities. Whether you have a job opening, an interesting project, or just want to discuss tech, drop me a message and I'll get back to you promptly.</p>
+              </div>
+
+              <div class="contact-status-indicator">
+                <span class="status-ping" aria-hidden="true"></span>
+                <span>Available for Full-Time Roles &amp; Internships</span>
+              </div>
+
+              <div class="contact-methods" aria-label="Direct contact channels">
+                <div class="contact-card contact-email-card">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <div class="contact-card-copy">
+                    <span class="contact-card-label">EMAIL</span>
+                    <a class="contact-card-value" href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com</a>
+                  </div>
+                </div>
+                <a class="contact-card contact-profile-card" href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noopener noreferrer">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18H5.67V9.4h2.67ZM7 8.22a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1ZM18.33 18h-2.66v-4.18c0-1-.02-2.29-1.4-2.29s-1.61 1.1-1.61 2.22V18H10V9.4h2.56v1.17h.04a2.8 2.8 0 0 1 2.52-1.39c2.7 0 3.21 1.78 3.21 4.1Z"/></svg>
+                  </span>
+                  <span class="contact-card-copy">
+                    <span class="contact-card-label">PROFESSIONAL PROFILE</span>
+                    <span class="contact-card-value">LinkedIn</span>
+                  </span>
+                  <span class="contact-card-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="contact-card contact-profile-card" href="https://github.com/varunib" target="_blank" rel="noopener noreferrer">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.51 0-1.22.44-2.22 1.15-3-.12-.29-.5-1.43.11-2.97 0 0 .94-.3 3.06 1.15a10.6 10.6 0 0 1 5.57 0c2.13-1.45 3.06-1.15 3.06-1.15.61 1.54.23 2.68.11 2.97.72.78 1.15 1.78 1.15 3 0 4.28-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+                  </span>
+                  <span class="contact-card-copy">
+                    <span class="contact-card-label">CODE &amp; PROJECTS</span>
+                    <span class="contact-card-value">GitHub</span>
+                  </span>
+                  <span class="contact-card-arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <p class="contact-resume">
+                <button class="resume-link-btn resume-trigger" type="button" aria-haspopup="dialog" aria-controls="resume-modal">
+                  Looking for my resume? <span>View &amp; Download PDF ↗</span>
+                </button>
+              </p>
+            </div>
+
+            <!-- INTERACTIVE CONTACT FORM -->
+            <div class="contact-form-side">
+              <div class="contact-form-container">
+                <div class="form-header">
+                  <h3 class="form-title">Send a Direct Message</h3>
+                  <span class="form-badge">⚡ Quick Response</span>
+                </div>
+                <form id="contact-form" class="contact-form" novalidate>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label for="form-name">Your Name <span class="required">*</span></label>
+                      <input type="text" id="form-name" name="name" placeholder="e.g. Jane Doe" autocomplete="name" required />
+                    </div>
+                    <div class="form-field">
+                      <label for="form-email">Email Address <span class="required">*</span></label>
+                      <input type="email" id="form-email" name="email" placeholder="jane@company.com" autocomplete="email" required />
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="field-label-main">Inquiry Reason</label>
+                    <div class="topic-chips" role="radiogroup" aria-label="Inquiry Reason">
+                      <label class="topic-chip">
+                        <input type="radio" name="topic" value="Job Opportunity" checked />
+                        <span class="chip-text">💼 Job Offer</span>
+                      </label>
+                      <label class="topic-chip">
+                        <input type="radio" name="topic" value="Project Collaboration" />
+                        <span class="chip-text">🤝 Project</span>
+                      </label>
+                      <label class="topic-chip">
+                        <input type="radio" name="topic" value="General Inquiry" />
+                        <span class="chip-text">💬 General</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <div class="field-label-wrap">
+                      <label for="form-message">Message <span class="required">*</span></label>
+                      <span class="char-counter" id="form-char-count">0 / 800</span>
+                    </div>
+                    <textarea id="form-message" name="message" rows="4" maxlength="800" placeholder="Hi Varuni, I came across your portfolio and would like to connect regarding..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-submit-form" id="form-submit-btn">
+                    <span class="btn-text">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                      Send Message
+                    </span>
+                    <span class="btn-spinner" aria-hidden="true" hidden></span>
+                  </button>
+
+                  <div id="form-status" class="form-status" role="alert" aria-live="polite" hidden></div>
+                </form>
               </div>
             </div>
-            <a class="contact-card contact-profile-card" href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noopener noreferrer">
-              <span class="contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18H5.67V9.4h2.67ZM7 8.22a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1ZM18.33 18h-2.66v-4.18c0-1-.02-2.29-1.4-2.29s-1.61 1.1-1.61 2.22V18H10V9.4h2.56v1.17h.04a2.8 2.8 0 0 1 2.52-1.39c2.7 0 3.21 1.78 3.21 4.1Z"/></svg>
-              </span>
-              <span class="contact-card-copy">
-                <span class="contact-card-label">PROFESSIONAL PROFILE</span>
-                <span class="contact-card-value">LinkedIn</span>
-              </span>
-              <span class="contact-card-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="contact-card contact-profile-card" href="https://github.com/varunib" target="_blank" rel="noopener noreferrer">
-              <span class="contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.51 0-1.22.44-2.22 1.15-3-.12-.29-.5-1.43.11-2.97 0 0 .94-.3 3.06 1.15a10.6 10.6 0 0 1 5.57 0c2.13-1.45 3.06-1.15 3.06-1.15.61 1.54.23 2.68.11 2.97.72.78 1.15 1.78 1.15 3 0 4.28-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
-              </span>
-              <span class="contact-card-copy">
-                <span class="contact-card-label">CODE &amp; PROJECTS</span>
-                <span class="contact-card-value">GitHub</span>
-              </span>
-              <span class="contact-card-arrow" aria-hidden="true">↗</span>
-            </a>
           </div>
-          <p class="contact-resume">
-            <button class="resume-link-btn resume-trigger" type="button" aria-haspopup="dialog" aria-controls="resume-modal">
-              Looking for my resume? <span>View &amp; Download PDF ↗</span>
-            </button>
-          </p>
+
           <p class="footer-copy">© 2026 Varuni Bennur · Built with care.</p>
         </div>
       </section>

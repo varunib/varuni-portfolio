@@ -215,3 +215,121 @@ if (roleRotator && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
 
   setTimeout(tick, pauseBetween);
 }
+
+
+// ── INTERACTIVE CONTACT FORM ──
+const contactForm = document.querySelector('#contact-form');
+if (contactForm) {
+  const nameInput = contactForm.querySelector('#form-name');
+  const emailInput = contactForm.querySelector('#form-email');
+  const messageInput = contactForm.querySelector('#form-message');
+  const charCounter = contactForm.querySelector('#form-char-count');
+  const submitBtn = contactForm.querySelector('#form-submit-btn');
+  const btnSpinner = submitBtn ? submitBtn.querySelector('.btn-spinner') : null;
+  const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
+  const formStatus = document.querySelector('#form-status');
+
+  // Live character counter
+  if (messageInput && charCounter) {
+    const maxChars = messageInput.getAttribute('maxlength') || 800;
+    messageInput.addEventListener('input', () => {
+      const length = messageInput.value.length;
+      charCounter.textContent = `${length} / ${maxChars}`;
+    });
+  }
+
+  const showStatus = (type, htmlMessage) => {
+    if (!formStatus) return;
+    formStatus.hidden = false;
+    formStatus.className = `form-status is-${type}`;
+    formStatus.innerHTML = htmlMessage;
+    formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  };
+
+  contactForm.addEventListener('submit', async event => {
+    event.preventDefault();
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+    const topicRadio = contactForm.querySelector('input[name="topic"]:checked');
+    const topic = topicRadio ? topicRadio.value : 'Job Opportunity';
+
+    // Basic validation
+    if (!name) {
+      showStatus('error', 'Please enter your name.');
+      nameInput?.focus();
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      showStatus('error', 'Please enter a valid email address.');
+      emailInput?.focus();
+      return;
+    }
+
+    if (!message || message.length < 10) {
+      showStatus('error', 'Please enter a message (at least 10 characters).');
+      messageInput?.focus();
+      return;
+    }
+
+    // Set loading state
+    if (submitBtn) submitBtn.disabled = true;
+    if (btnSpinner) btnSpinner.hidden = false;
+    const originalBtnText = btnText ? btnText.innerHTML : 'Send Message';
+    if (btnText) btnText.innerHTML = 'Sending...';
+    if (formStatus) formStatus.hidden = true;
+
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+      const response = await fetch('https://formsubmit.co/ajax/varunibennur7@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          _subject: `Portfolio [${topic}] inquiry from ${name}`,
+          topic: topic,
+          message: message
+        }),
+        signal: controller.signal
+      });
+
+      clearTimeout(timeoutId);
+
+      if (response.ok) {
+        showStatus(
+          'success',
+          `✅ <strong>Message sent successfully!</strong> Thank you ${name}, I'll review your note and respond to <em>${email}</em> promptly.`
+        );
+        contactForm.reset();
+        if (charCounter) charCounter.textContent = '0 / 800';
+      } else {
+        throw new Error('Service responded with an error');
+      }
+    } catch (err) {
+      console.warn('Direct form submission error:', err);
+      const fallbackMailto = `mailto:varunibennur7@gmail.com?subject=${encodeURIComponent(
+        `Portfolio [${topic}] inquiry from ${name}`
+      )}&body=${encodeURIComponent(
+        `Hi Varuni,\n\nName: ${name}\nEmail: ${email}\nTopic: ${topic}\n\n${message}`
+      )}`;
+
+      showStatus(
+        'error',
+        `⚠️ Could not submit directly. <a href="${fallbackMailto}" target="_blank" rel="noopener noreferrer">Click here to send via your email client ↗</a>`
+      );
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+      if (btnSpinner) btnSpinner.hidden = true;
+      if (btnText) btnText.innerHTML = originalBtnText;
+    }
+  });
+}
