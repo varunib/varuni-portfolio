@@ -333,3 +333,57 @@ if (contactForm) {
     }
   });
 }
+
+
+// ── SCROLL READING PROGRESS & BACK TO TOP ──
+const progressBar = document.querySelector('#scroll-progress-bar');
+const backToTopBtn = document.querySelector('#back-to-top');
+
+if (progressBar || backToTopBtn) {
+  let ticking = false;
+
+  const updateScrollState = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    if (progressBar && docHeight > 0) {
+      const scrollPercent = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+      progressBar.style.width = `${scrollPercent}%`;
+    }
+
+    if (backToTopBtn) {
+      if (scrollTop > 350) {
+        backToTopBtn.hidden = false;
+        requestAnimationFrame(() => backToTopBtn.classList.add('is-visible'));
+      } else {
+        backToTopBtn.classList.remove('is-visible');
+        setTimeout(() => {
+          if (!backToTopBtn.classList.contains('is-visible')) {
+            backToTopBtn.hidden = true;
+          }
+        }, 250);
+      }
+    }
+    ticking = false;
+  };
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollState);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  // Initial update
+  updateScrollState();
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}

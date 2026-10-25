@@ -32,6 +32,16 @@ button{cursor:pointer;border:none;background:none;font:inherit}
 /* ── CURSOR GLOW ── */
 .cursor-glow{position:fixed;left:-160px;top:-160px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(228,163,75,.09),transparent 68%);pointer-events:none;z-index:0;transition:transform .07s linear;will-change:transform}
 
+/* ── SCROLL READING PROGRESS BAR ── */
+.scroll-progress-container{position:fixed;top:0;left:0;width:100%;height:3px;background:transparent;z-index:1000;pointer-events:none}
+.scroll-progress-bar{height:100%;width:0%;background:linear-gradient(90deg,#f3a23b 0%,#ff8838 50%,#f3b465 100%);box-shadow:0 0 10px rgba(243,162,59,.7),0 0 4px #f3a23b;transition:width .08s ease-out}
+
+/* ── BACK TO TOP BUTTON ── */
+.back-to-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:rgba(18,22,30,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(243,162,59,.35);color:#f3b465;display:grid;place-items:center;cursor:pointer;z-index:900;box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .25s ease,transform .25s ease,background .2s,border-color .2s,box-shadow .2s}
+.back-to-top.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover{background:rgba(243,162,59,.16);border-color:#f3a23b;color:#fff;box-shadow:0 8px 28px rgba(243,162,59,.35);transform:translateY(-3px)}
+.back-to-top:focus-visible{outline:2px solid #f3a23b;outline-offset:3px}
+
 /* ── NAV ── */
 .nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
@@ -484,6 +494,7 @@ a.contact-card-value:hover{color:#f3b465}
   .node-sub{font-size:7.5px}
   .arch-arrow{font-size:10px}
   .arch-footer{font-size:8.5px}
+  .back-to-top{bottom:18px;right:18px;width:38px;height:38px}
 }
 @media(max-width:400px){
   .hero-portrait-card{width:min(100%,330px)}
