@@ -1,648 +1,447 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Varuni Bennur — Information Science & Engineering graduate building full-stack applications, backend systems, and applied AI/ML solutions. Based in Bengaluru, India." />
-    <meta property="og:title" content="Varuni Bennur | Software Engineer & AI/ML Developer" />
-    <meta property="og:description" content="Portfolio of Varuni Bennur — full-stack development, backend systems, and applied AI/ML." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <title>Varuni Bennur | Software Engineer & AI/ML Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- SCROLL READING PROGRESS BAR -->
-    <div class="scroll-progress-container" aria-hidden="true">
-      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3eb">
+  <meta name="description" content="Varuni Bennur — ISE Graduate, Python &amp; Web Developer building AI-powered full-stack applications. Based in Bengaluru.">
+  <meta property="og:title" content="Varuni Bennur | Portfolio — AI &amp; Full-Stack Developer">
+  <meta property="og:description" content="ISE Graduate (9.4 CGPA), Python &amp; GenAI Developer building Voice AI, RAG, and Cloud applications from Bengaluru.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://varuni-portfolio-six.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Varuni Bennur | Portfolio">
+  <meta name="twitter:description" content="AI &amp; Full-Stack Developer — Voice AI, RAG Systems, FastAPI, React, Docker.">
+  <title>Varuni Bennur | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23b8f2d0' stroke='%23171717' stroke-width='8'/><text x='50' y='68' font-size='56' font-family='Arial Black, sans-serif' font-weight='900' text-anchor='middle' fill='%23171717'>V<tspan fill='%237955b8'>.</tspan></text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="page nav-wrap">
+    <nav class="brutal nav" aria-label="Primary navigation">
+      <a class="display brand" href="#hero" aria-label="Varuni, home">Varuni<span class="purple-dot">.</span></a>
+      <button class="icon-btn menu-toggle press" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
 
-    <!-- NAV -->
-    <header class="nav" role="banner">
-      <div class="nav-inner wrap">
-        <a class="brand" href="#top" aria-label="Varuni Bennur — home">Varuni Bennur<span class="brand-dot">.</span></a>
-        <nav aria-label="Main navigation" id="main-nav">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="nav-actions">
-          <a class="nav-gh" href="https://github.com/varunib" target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub ↗</a>
-          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
-            <span></span><span></span><span></span>
-          </button>
+  <main id="main" class="page">
+    <section class="hero-grid" id="hero" aria-labelledby="hero-title">
+      <div class="hero-main brutal">
+        <div class="status-badge press">
+          <span class="status-dot"></span>
+          <span>Available for Roles &amp; Internships &bull; Bengaluru / Hybrid</span>
+        </div>
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="display" id="hero-title">Hello, I'm <span class="highlight">Varuni Bennur.</span></h1>
+        <p class="hero-role"><span class="typewriter" id="typewriterText">AI &amp; Full-Stack Developer</span><span class="cursor" aria-hidden="true">|</span></p>
+        <p class="hero-copy">Information Science graduate &amp; Python/Web Developer — building AI-powered, full-stack applications from Bengaluru.</p>
+        <div class="actions">
+          <a class="btn press" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-secondary press" href="Varuni_Bennur_Resume.pdf" target="_blank" rel="noopener">View Resume <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary press" href="Varuni_Bennur_Resume.pdf" download>Download <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-secondary press" href="https://github.com/varunib" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </header>
-
-    <main id="top">
-
-      <!-- HERO -->
-      <section class="hero wrap" aria-labelledby="hero-heading">
-        <div class="hero-layout">
-          <div class="hero-portrait-card">
-            <img class="hero-portrait" src="assets/varuni-profile.png" alt="Varuni Bennur smiling outdoors" fetchpriority="high" />
+      <aside class="hero-side">
+        <!-- Profile Card -->
+        <div class="brutal profile-card">
+          <div class="profile-photo-wrap">
+            <img src="varuni-photo.jpg" alt="Varuni Bennur" class="profile-img" loading="eager">
+            <span class="profile-location-badge">Bengaluru, IN &#128205;</span>
           </div>
-          <div class="hero-copy">
-            <p class="eyebrow">INFORMATION SCIENCE &amp; ENGINEERING · BENGALURU, INDIA</p>
-            <h1 id="hero-heading">Varuni<br /><span class="hero-name-last">Bennur</span><span class="hero-name-dot">.</span></h1>
-            <p class="hero-role" aria-label="Roles: Software Engineer, Applied AI and ML Developer, Full-Stack Web Builder, Backend and API Specialist">
-              <span class="role-rotator" id="role-rotator">Software Engineer</span><span class="role-cursor" aria-hidden="true"></span>
-            </p>
-            <p class="hero-intro">I'm Varuni Bennur — an ISE graduate focused on full-stack development, backend systems, and applied AI/ML. I build things that are reliable, purposeful, and a little smarter.</p>
-            <blockquote class="hero-quote">
-              <p>“Build with logic. Create with purpose.”</p>
-              <footer>Where engineering meets real-world impact.</footer>
-            </blockquote>
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#projects">View Projects <span aria-hidden="true">↓</span></a>
-              <button class="btn btn-outline resume-trigger" type="button" aria-haspopup="dialog" aria-controls="resume-modal">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                View Resume
-              </button>
-              <a class="btn btn-ghost" href="#contact">Contact Me</a>
-            </div>
-            <div class="hero-links">
-              <a href="https://github.com/varunib" target="_blank" rel="noreferrer" class="social-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noreferrer" class="social-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                LinkedIn
-              </a>
-            </div>
+          <div class="profile-caption">
+            <strong class="display profile-name">Varuni Bennur</strong>
+            <span class="profile-role">Information Science Graduate &middot; VTU</span>
           </div>
         </div>
 
-        <!-- RECRUITER HIGHLIGHTS STRIP -->
-        <div class="recruiter-bar" role="region" aria-label="Quick Recruiter Summary">
-          <div class="recruiter-cell">
-            <span class="recruiter-status-dot" aria-hidden="true">
-              <span class="recruiter-ping"></span>
-            </span>
-            <div class="recruiter-text">
-              <span class="recruiter-title">CURRENT STATUS</span>
-              <strong class="recruiter-desc">Open to Full-Time &amp; Intern Roles</strong>
+        <!-- Stats card (upgraded) -->
+        <div class="brutal stats-card">
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-number display">9.4</span>
+              <span class="stat-label">GPA</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number display">3+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number display">4+</span>
+              <span class="stat-label">Certs</span>
             </div>
           </div>
-          
-          <div class="recruiter-divider" aria-hidden="true"></div>
-
-          <div class="recruiter-cell">
-            <span class="recruiter-icon" aria-hidden="true">🎓</span>
-            <div class="recruiter-text">
-              <span class="recruiter-title">EDUCATION</span>
-              <strong class="recruiter-desc">B.E. Information Science (VTU)</strong>
-            </div>
-          </div>
-
-          <div class="recruiter-divider" aria-hidden="true"></div>
-
-          <div class="recruiter-cell">
-            <span class="recruiter-icon" aria-hidden="true">📍</span>
-            <div class="recruiter-text">
-              <span class="recruiter-title">WORK LOCATION</span>
-              <strong class="recruiter-desc">Bengaluru · Open to Remote</strong>
-            </div>
-          </div>
-
-          <div class="recruiter-divider" aria-hidden="true"></div>
-
-          <div class="recruiter-cell">
-            <span class="recruiter-icon" aria-hidden="true">⚡</span>
-            <div class="recruiter-text">
-              <span class="recruiter-title">PORTFOLIO TRACK</span>
-              <strong class="recruiter-desc">5 Shipped Apps · 1 Internship</strong>
-            </div>
-          </div>
+          <p class="stats-tagline">VTU '26 &middot; ISE &middot; Bengaluru</p>
         </div>
-      </section>
-
-      <!-- SKILLS MARQUEE -->
-      <div class="marquee" aria-label="Technical skills overview" role="marquee">
-        <div class="marquee-track">PYTHON <i>✦</i> JAVASCRIPT <i>✦</i> JAVA <i>✦</i> SQL <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> FASTAPI <i>✦</i> FLASK <i>✦</i> EXPRESS.JS <i>✦</i> MYSQL <i>✦</i> MONGODB <i>✦</i> CHROMADB <i>✦</i> RAG <i>✦</i> LANGGRAPH <i>✦</i> LANGCHAIN <i>✦</i> LSTM <i>✦</i> SCIKIT-LEARN <i>✦</i> STREAMLIT <i>✦</i> DOCKER <i>✦</i> AWS <i>✦</i> GIT <i>✦</i> POSTMAN <i>✦</i> PYTHON <i>✦</i> JAVASCRIPT <i>✦</i> JAVA <i>✦</i> SQL <i>✦</i> REACT <i>✦</i> NODE.JS <i>✦</i> FASTAPI <i>✦</i> FLASK <i>✦</i> EXPRESS.JS <i>✦</i> MYSQL <i>✦</i> MONGODB <i>✦</i> CHROMADB <i>✦</i> RAG <i>✦</i> LANGGRAPH <i>✦</i> LANGCHAIN <i>✦</i> LSTM <i>✦</i> SCIKIT-LEARN <i>✦</i> STREAMLIT <i>✦</i> DOCKER <i>✦</i> AWS <i>✦</i> GIT <i>✦</i> POSTMAN <i>✦</i></div>
-      </div>
-
-      <!-- ABOUT -->
-      <section id="about" class="section about-section wrap" aria-labelledby="about-heading">
-        <p class="eyebrow">ABOUT ME</p>
-        <div class="about-grid">
-          <div class="about-text">
-            <h2 id="about-heading">Engineering reliable software,<br />then making it a little more <em>intelligent.</em></h2>
-            <p>I'm an Information Science and Engineering graduate from Bengaluru, India. I enjoy working at the intersection of strong software engineering and practical AI — building full-stack applications, designing backend APIs, and applying machine learning where it genuinely adds value.</p>
-            <p>I've worked as a Python and Web Developer Intern, contributed to real-world projects involving REST APIs, data pipelines, and model evaluation, and built personal projects spanning air quality forecasting, agentic RAG systems, voice AI, and sales analytics.</p>
-            <div class="about-actions">
-              <button class="btn btn-primary resume-trigger" type="button" aria-haspopup="dialog" aria-controls="resume-modal">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                View Resume
-              </button>
-              <a class="btn btn-outline" href="mailto:varunibennur7@gmail.com">Get in Touch</a>
-            </div>
-          </div>
-          <div class="about-card">
-            <div class="about-stat"><span class="stat-label">Degree</span><span class="stat-value">B.E. Information Science &amp; Engineering</span></div>
-            <div class="about-stat"><span class="stat-label">University</span><span class="stat-value">Visvesvaraya Technological University</span></div>
-            <div class="about-stat"><span class="stat-label">Location</span><span class="stat-value">Bengaluru, India</span></div>
-            <div class="about-stat"><span class="stat-label">Focus</span><span class="stat-value">Full-Stack · Backend · Applied AI/ML</span></div>
-            <div class="about-stat"><span class="stat-label">Email</span><span class="stat-value"><a href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com</a></span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section skills-section wrap" aria-labelledby="skills-heading">
-        <div class="skills-heading">
+        <!-- Feature cards (3) -->
+        <div class="brutal feature-card feature-card--mint">
+          <span class="feature-icon" aria-hidden="true">&#9889;</span>
           <div>
-            <p class="eyebrow">TOOLS I WORK WITH</p>
-            <h2 id="skills-heading">The <em>Stack</em></h2>
-          </div>
-          <p class="skills-intro">A focused stack spanning full-stack engineering, applied machine learning, and deployment.</p>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Programming Languages</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="Core Language · Used across all AI/ML &amp; Backend projects"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Py</span></span><span class="skill-label">Python</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Frontend &amp; Node.js development · Modern ES6+"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">JS</span></span><span class="skill-label">JavaScript</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="OOP &amp; Data Structures coursework foundation"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">J</span></span><span class="skill-label">Java</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Relational queries, schema design &amp; indexing"><span class="skill-icon"><span class="skill-icon-fallback">SQL</span></span><span class="skill-label">SQL</span></div>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Frontend Development</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="Component architecture, hooks &amp; responsive SPAs"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Re</span></span><span class="skill-label">React.js</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Semantic markup, accessibility &amp; modern web standards"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">HTML</span></span><span class="skill-label">HTML5</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="CSS Grid, Flexbox, custom animations &amp; styling"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">CSS</span></span><span class="skill-label">CSS3</span></div>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Backend Development</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="High-performance async APIs with Pydantic validation"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">FA</span></span><span class="skill-label">FastAPI</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Microservices &amp; REST APIs built in Contriver internship"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Fl</span></span><span class="skill-label">Flask</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Server-side logic &amp; API integration"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Node</span></span><span class="skill-label">Node.js + Express.js</span></div>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>AI &amp; Machine Learning</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="Supervised learning, model evaluation &amp; metrics"><span class="skill-icon"><span class="skill-icon-fallback">ML</span></span><span class="skill-label">Machine Learning</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Retrieval-Augmented Generation with LangChain &amp; LangGraph"><span class="skill-icon"><span class="skill-icon-fallback">RAG</span></span><span class="skill-label">RAG Systems</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Multi-agent cyclic workflows &amp; tool-calling agents"><span class="skill-icon"><span class="skill-icon-fallback">LG</span></span><span class="skill-label">LangGraph</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Vector embeddings, indexing &amp; semantic similarity"><span class="skill-icon"><span class="skill-icon-fallback">IR</span></span><span class="skill-label">ChromaDB + Sentence Transformers</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Deep learning architectures &amp; LSTM sequence modeling"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">ML</span></span><span class="skill-label">Scikit-learn + TensorFlow / Keras</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Ultra-fast LLM inference &amp; speech transcription"><span class="skill-icon"><span class="skill-icon-fallback">AI</span></span><span class="skill-label">Groq API + OpenAI Whisper</span></div>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Databases</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="Relational schemas, queries &amp; cloud database storage"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">PG</span></span><span class="skill-label">PostgreSQL / Supabase</span></div>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Data Science &amp; Visualization</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="Data cleaning, aggregation &amp; feature manipulation"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Pd</span></span><span class="skill-label">Pandas</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Vectorized numerical computing &amp; matrix transforms"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Np</span></span><span class="skill-label">NumPy</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Interactive statistical charts &amp; forecast plots"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Pl</span></span><span class="skill-label">Plotly</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Web interfaces for Python ML &amp; data apps"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">St</span></span><span class="skill-label">Streamlit</span></div>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Tools &amp; Deployment</h3>
-            <div class="skill-tiles">
-              <div class="skill-tile" tabindex="0" data-tooltip="Version control, branching &amp; team collaboration"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Git</span></span><span class="skill-label">Git &amp; GitHub</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Containerized environments &amp; reproducible builds"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">Dk</span></span><span class="skill-label">Docker</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="API endpoint validation, testing &amp; mocking"><span class="skill-icon"><img class="skill-icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="" loading="lazy" /><span class="skill-icon-fallback">PM</span></span><span class="skill-label">Postman</span></div>
-              <div class="skill-tile" tabindex="0" data-tooltip="Serverless production deployment &amp; CI/CD"><span class="skill-icon"><span class="skill-icon-fallback">V</span></span><span class="skill-label">Vercel</span></div>
-            </div>
+            <strong>Full-Stack Dev</strong>
+            <p>React, FastAPI, Node.js, Docker &mdash; end-to-end apps shipped and deployed.</p>
           </div>
         </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section id="experience" class="section experience-section wrap" aria-labelledby="exp-heading">
-        <p class="eyebrow">WORK EXPERIENCE</p>
-        <h2 id="exp-heading">Experience</h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-meta">
-              <span class="timeline-period">Feb 2026 – May 2026</span>
-              <span class="timeline-type">Internship</span>
-            </div>
-            <div class="timeline-body">
-              <h3>Python &amp; Web Developer Intern</h3>
-              <p class="timeline-org">Contriver · Bengaluru, India</p>
-              <ul class="timeline-points">
-                <li>Developed and maintained backend services using Python and Flask, building REST APIs consumed by frontend React.js applications.</li>
-                <li>Worked with Node.js and Express.js for server-side logic and API integration.</li>
-                <li>Performed data processing tasks including cleaning, transformation, and preparation for model evaluation pipelines.</li>
-                <li>Conducted testing and debugging of API endpoints using Postman; maintained version control with Git and GitHub.</li>
-              </ul>
-              <div class="timeline-tags"><span>Python</span><span>Flask</span><span>React.js</span><span>Node.js</span><span>REST APIs</span><span>Postman</span><span>Git</span></div>
-            </div>
-          </article>
+        <div class="brutal feature-card feature-card--peach">
+          <span class="feature-icon" aria-hidden="true">&#129302;</span>
+          <div>
+            <strong>AI &amp; GenAI</strong>
+            <p>RAG pipelines, LangChain, LLMs, Prompt Engineering &amp; NLP.</p>
+          </div>
         </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="section projects-section wrap" aria-labelledby="projects-heading">
-        <p class="eyebrow">SELECTED WORK</p>
-        <h2 id="projects-heading">Projects</h2>
-
-        <!-- Project Filter Tabs -->
-        <div class="project-filters" role="tablist" aria-label="Filter projects by domain">
-          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
-            All <span class="filter-count">5</span>
-          </button>
-          <button class="filter-tab" data-filter="aiml" role="tab" aria-selected="false">
-            AI &amp; ML <span class="filter-count">3</span>
-          </button>
-          <button class="filter-tab" data-filter="fullstack" role="tab" aria-selected="false">
-            Full Stack <span class="filter-count">1</span>
-          </button>
-          <button class="filter-tab" data-filter="backend" role="tab" aria-selected="false">
-            Backend &amp; APIs <span class="filter-count">1</span>
-          </button>
+        <div class="brutal feature-card feature-card--lavender">
+          <span class="feature-icon" aria-hidden="true">&#9729;</span>
+          <div>
+            <strong>Cloud &amp; DevOps</strong>
+            <p>AWS (EC2/S3), Docker, CI/CD, Git &mdash; certified AWS Cloud Practitioner.</p>
+          </div>
         </div>
+      </aside>
+    </section>
 
-        <div class="projects-grid">
+    <section class="section-grid" id="about" aria-labelledby="about-title">
+      <div class="section-title">
+        <p class="eyebrow">01 / About</p>
+        <h2 class="display" id="about-title">A little <span class="highlight">about me.</span></h2>
+      </div>
+      <div class="section-body brutal card about-card">
+        <p>I'm a B.E. Information Science &amp; Engineering graduate from VTU (SKSV College of Engineering, Gadag) with a 9.4 GPA and department rank holder. Based in Bengaluru, I build AI-powered and full-stack applications using Python, React.js, FastAPI, and modern cloud tools.</p>
+        <p>During my internship at Contriver, Bengaluru, I developed production-grade applications integrating REST APIs, ML models, and containerized deployments. I work across the stack &mdash; from designing RAG pipelines with LangChain and LLaMA to building real-time dashboards with React and Node.js.</p>
+        <p>I'm certified in AWS Cloud Practitioner Essentials and Generative AI (Microsoft &amp; LinkedIn Learning), and I'm always exploring what's next in AI-assisted development. When I'm not coding, I'm probably debugging something interesting or contributing to open source.</p>
+      </div>
+    </section>
 
-          <!-- Project 1: Air Quality -->
-          <article class="project-card" data-category="fullstack" aria-labelledby="proj-aq-title">
-            <figure class="project-preview aq-visual">
-              <img src="assets/city-air-quality-preview.png" alt="City-level air quality dashboard showing live AQI readings, pollutant trends, a city map, forecasts, and health recommendations" loading="lazy" />
-            </figure>
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Full stack · data visualization</span>
-              </div>
-              <h3 id="proj-aq-title">City-Level Air Quality Monitoring &amp; Forecasting</h3>
-              <p>A full-stack application for monitoring city-level air quality, analyzing pollutant concentrations, and exploring air-quality forecasts and health recommendations.</p>
-              <div class="project-tags"><span>React</span><span>Node.js</span><span>Express.js</span><span>Open-Meteo API</span></div>
-              <div class="project-links">
-                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/City-Level-Air-Quality-Monitoring-and-Forecasting" target="_blank" rel="noopener noreferrer" aria-label="View Air Quality Monitoring project on GitHub">GitHub ↗</a>
-                <a class="btn btn-sm btn-primary" href="https://city-level-air-quality-monitoring-a-lilac.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Air Quality Monitoring live demo">Live Demo ↗</a>
-              </div>
+    <section class="section-grid" id="experience" aria-labelledby="exp-title">
+      <div class="section-title">
+        <p class="eyebrow">02 / Experience</p>
+        <h2 class="display" id="exp-title">Where I've <span class="highlight">worked.</span></h2>
+      </div>
+      <div class="section-body exp-timeline">
+        <!-- Work Experience Item -->
+        <article class="brutal exp-card">
+          <div class="exp-header">
+            <div>
+              <span class="exp-badge">Internship</span>
+              <h3 class="display exp-role">Full-Stack &amp; AI Engineer Intern</h3>
+              <p class="exp-company"><strong>Contriver</strong> &middot; Bengaluru, India</p>
+            </div>
+            <span class="exp-period tag">Nov 2023 &ndash; May 2024</span>
+          </div>
+          <ul class="exp-highlights">
+            <li>Architected and deployed high-performance RESTful APIs using <strong>FastAPI</strong> and interactive user dashboards with <strong>React.js</strong>.</li>
+            <li>Engineered <strong>RAG (Retrieval-Augmented Generation)</strong> pipelines utilizing <strong>LangChain</strong> and vector indexing to enhance contextual information retrieval.</li>
+            <li>Containerized microservices and AI workflows using <strong>Docker</strong>, streamlining local testing and cloud deployments on <strong>AWS</strong>.</li>
+            <li>Collaborated in agile sprint cycles, managing Git version control, CI/CD pipeline automation, and code reviews.</li>
+          </ul>
+          <div class="exp-footer">
+            <div class="project-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">React.js</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">Docker</span>
+              <span class="tag">AWS</span>
+              <span class="tag">REST APIs</span>
+            </div>
+            <button class="btn btn-secondary press cert-btn lightbox-trigger" type="button" data-full="contriver-certificate.jpeg" aria-label="View Contriver internship certificate">
+              View Certificate &#128270;
+            </button>
+          </div>
+        </article>
+
+        <!-- Certifications & Education Grid -->
+        <div class="credentials-grid">
+          <article class="brutal cred-card cred-card--mint">
+            <span class="cred-icon" aria-hidden="true">&#127891;</span>
+            <div>
+              <span class="cred-category">Education</span>
+              <h4 class="display">B.E. in Information Science</h4>
+              <p class="cred-issuer">VTU (SKSVMACET, Gadag) &middot; <strong>9.4 CGPA</strong></p>
+              <p class="cred-meta">Department Rank Holder &middot; Class of 2024</p>
             </div>
           </article>
 
-          <!-- Project 2: Geospatial API -->
-          <article class="project-card" data-category="backend" aria-labelledby="proj-geo-title">
-            <div class="project-preview geo-visual arch-preview" role="img" aria-label="Geospatial API architecture diagram: KML or zipped Shapefile input to PyProj coordinate reprojection, Shapely metric calculation, and GeoJSON response">
-              <div class="arch-header">
-                <span class="arch-badge geo-badge"><span class="arch-dot geo-dot"></span> PIPELINE ARCHITECTURE</span>
-                <span class="arch-tag">FastAPI · EPSG:3857</span>
-              </div>
-              <div class="arch-flow">
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg>
-                  </div>
-                  <span class="node-title">KML / ZIP</span>
-                  <span class="node-sub">Vector Input</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                  </div>
-                  <span class="node-title">PyProj CRS</span>
-                  <span class="node-sub">Auto-Reproject</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 22 22 22"></polygon></svg>
-                  </div>
-                  <span class="node-title">Shapely</span>
-                  <span class="node-sub">Area &amp; Length</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                  </div>
-                  <span class="node-title">GeoJSON</span>
-                  <span class="node-sub">Metric Output</span>
-                </div>
-              </div>
-              <div class="arch-footer">
-                <span class="arch-metric">Sub-millisecond geodesic computation</span>
-                <span class="arch-lang">Python 3.11</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Backend API</span>
-              </div>
-              <h3 id="proj-geo-title">Geospatial Measurement API</h3>
-              <p>A FastAPI service that accepts KML and zipped Shapefiles, extracts geographic features, and returns metric area or length measurements. Detects coordinate reference systems and reprojects geographic data before measuring.</p>
-              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>GeoPandas</span><span>Shapely</span><span>PyProj</span><span>KML</span></div>
-              <div class="project-links">
-                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/geospatial-measurement-api" target="_blank" rel="noreferrer" aria-label="View Geospatial Measurement API on GitHub">GitHub ↗</a>
-              </div>
+          <article class="brutal cred-card cred-card--peach">
+            <span class="cred-icon" aria-hidden="true">&#9729;</span>
+            <div>
+              <span class="cred-category">Certification</span>
+              <h4 class="display">AWS Cloud Practitioner</h4>
+              <p class="cred-issuer">Amazon Web Services (AWS)</p>
+              <p class="cred-meta">Cloud Essentials, EC2, S3, IAM &amp; Security</p>
             </div>
           </article>
 
-          <!-- Project 3: Agentic RAG -->
-          <article class="project-card rag-card" data-category="aiml" aria-labelledby="proj-rag-title">
-            <figure class="project-preview rag-visual">
-              <img src="assets/rag-pipeline.png" alt="RAG pipeline diagram showing query, retrieve, augment, and generate stages" loading="lazy" />
-            </figure>
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Agentic AI</span>
-              </div>
-              <h3 id="proj-rag-title">Agentic RAG Knowledge Platform</h3>
-              <p>Upload documents and get cited answers through a LangGraph workflow that routes questions to document retrieval or tools such as web search, CSV analysis, SQL, and calculations. Retrieval combines ChromaDB, BM25, and reranking.</p>
-              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>ChromaDB</span><span>BM25</span><span>Groq</span></div>
-              <div class="project-links">
-                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/agentic-rag-knowledge-platform" target="_blank" rel="noreferrer" aria-label="View Agentic RAG Knowledge Platform on GitHub">GitHub ↗</a>
-              </div>
+          <article class="brutal cred-card cred-card--lavender">
+            <span class="cred-icon" aria-hidden="true">&#129302;</span>
+            <div>
+              <span class="cred-category">Certification</span>
+              <h4 class="display">Career Essentials in GenAI</h4>
+              <p class="cred-issuer">Microsoft &amp; LinkedIn Learning</p>
+              <p class="cred-meta">LLMs, Prompt Engineering &amp; Responsible AI</p>
             </div>
           </article>
-
-          <!-- Project 4: Voice AI -->
-          <article class="project-card" data-category="aiml" aria-labelledby="proj-voice-title">
-            <div class="project-preview voice-visual arch-preview" role="img" aria-label="Voice AI assistant architecture diagram: audio call to OpenAI Whisper STT, conversational agent routing, and calendar booking + SMS">
-              <div class="arch-header">
-                <span class="arch-badge voice-badge"><span class="arch-dot voice-dot"></span> WORKFLOW ARCHITECTURE</span>
-                <span class="arch-tag">Whisper · Groq · Agentic</span>
-              </div>
-              <div class="arch-flow">
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                  </div>
-                  <span class="node-title">Missed Call</span>
-                  <span class="node-sub">Voice Stream</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-                  </div>
-                  <span class="node-title">Whisper STT</span>
-                  <span class="node-sub">Audio to Text</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                  </div>
-                  <span class="node-title">LLM Intent</span>
-                  <span class="node-sub">Action Router</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  </div>
-                  <span class="node-title">G-Calendar</span>
-                  <span class="node-sub">SMS &amp; Booking</span>
-                </div>
-              </div>
-              <div class="arch-footer">
-                <span class="arch-metric">End-to-end voice-to-appointment automation</span>
-                <span class="arch-lang">Twilio + OpenAI</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Voice AI</span>
-              </div>
-              <h3 id="proj-voice-title">Voice AI Personal Assistant</h3>
-              <p>A configurable missed-call assistant for small businesses. Owners define conversation workflows and actions; the assistant can follow up by text or voice, collect information, and manage appointments through Google Calendar.</p>
-              <div class="project-tags"><span>AI workflows</span><span>Text &amp; voice</span><span>OpenAI Whisper</span><span>Google Calendar</span></div>
-              <div class="project-links">
-                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/Voice-AI-Personal-Assistant" target="_blank" rel="noreferrer" aria-label="View Voice AI Personal Assistant on GitHub">GitHub ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 5: Sales Dashboard -->
-          <article class="project-card sales-card" data-category="aiml" aria-labelledby="proj-sales-title">
-            <div class="project-preview sales-visual arch-preview" role="img" aria-label="Sales forecasting architecture diagram: retail data to lag feature engineering, LSTM deep learning neural network, and Streamlit Plotly forecast">
-              <div class="arch-header">
-                <span class="arch-badge sales-badge"><span class="arch-dot sales-dot"></span> ML PIPELINE ARCHITECTURE</span>
-                <span class="arch-tag">LSTM · TensorFlow · Plotly</span>
-              </div>
-              <div class="arch-flow">
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                  </div>
-                  <span class="node-title">Store Data</span>
-                  <span class="node-sub">Weekly Sales</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line></svg>
-                  </div>
-                  <span class="node-title">Feature Eng</span>
-                  <span class="node-sub">Lags &amp; Scalers</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><circle cx="4" cy="6" r="2"></circle><circle cx="4" cy="18" r="2"></circle><circle cx="20" cy="6" r="2"></circle><circle cx="20" cy="18" r="2"></circle><line x1="6" y1="7" x2="9.5" y2="10.5"></line><line x1="6" y1="17" x2="9.5" y2="13.5"></line><line x1="14.5" y1="10.5" x2="18" y2="7"></line><line x1="14.5" y1="13.5" x2="18" y2="17"></line></svg>
-                  </div>
-                  <span class="node-title">LSTM Network</span>
-                  <span class="node-sub">Sequence Model</span>
-                </div>
-                <div class="arch-arrow" aria-hidden="true">→</div>
-                <div class="arch-node">
-                  <div class="node-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                  </div>
-                  <span class="node-title">Forecast</span>
-                  <span class="node-sub">Streamlit Plotly</span>
-                </div>
-              </div>
-              <div class="arch-footer">
-                <span class="arch-metric">Multi-horizon sales demand forecasting</span>
-                <span class="arch-lang">Streamlit + Keras</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Applied ML · retail analytics</span>
-                <span class="project-status">Not yet deployed</span>
-              </div>
-              <h3 id="proj-sales-title">AI-Powered Sales Analytics &amp; Forecasting Dashboard</h3>
-              <p>A Streamlit dashboard for exploring weekly retail sales by store and generating configurable LSTM forecasts. Includes forecast and training controls, sales visualizations, and model error metrics.</p>
-              <div class="project-tags"><span>Python</span><span>Streamlit</span><span>TensorFlow/Keras</span><span>Scikit-learn</span><span>Plotly</span><span>Pandas</span></div>
-              <div class="project-links">
-                <a class="btn btn-sm btn-outline" href="https://github.com/varunib/AI-Powered-Sales-Analytics-Forecasting-Dashboard" target="_blank" rel="noreferrer" aria-label="View Sales Analytics and Forecasting Dashboard on GitHub">GitHub ↗</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section contact-section wrap" aria-labelledby="contact-heading">
-        <div class="contact-panel">
-          <div class="contact-grid">
-            <div class="contact-info-side">
-              <div class="contact-intro">
-                <p class="eyebrow">GET IN TOUCH</p>
-                <h2 id="contact-heading">Let's <em>connect.</em></h2>
-                <p class="contact-sub">I'm actively looking for software engineering, full-stack, and AI/ML opportunities. Whether you have a job opening, an interesting project, or just want to discuss tech, drop me a message and I'll get back to you promptly.</p>
-              </div>
-
-              <div class="contact-status-indicator">
-                <span class="status-ping" aria-hidden="true"></span>
-                <span>Available for Full-Time Roles &amp; Internships</span>
-              </div>
-
-              <div class="contact-methods" aria-label="Direct contact channels">
-                <div class="contact-card contact-email-card">
-                  <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                  <div class="contact-card-copy">
-                    <span class="contact-card-label">EMAIL</span>
-                    <a class="contact-card-value" href="mailto:varunibennur7@gmail.com">varunibennur7@gmail.com</a>
-                  </div>
-                </div>
-                <a class="contact-card contact-profile-card" href="https://www.linkedin.com/in/varunibennur/" target="_blank" rel="noopener noreferrer">
-                  <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18H5.67V9.4h2.67ZM7 8.22a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1ZM18.33 18h-2.66v-4.18c0-1-.02-2.29-1.4-2.29s-1.61 1.1-1.61 2.22V18H10V9.4h2.56v1.17h.04a2.8 2.8 0 0 1 2.52-1.39c2.7 0 3.21 1.78 3.21 4.1Z"/></svg>
-                  </span>
-                  <span class="contact-card-copy">
-                    <span class="contact-card-label">PROFESSIONAL PROFILE</span>
-                    <span class="contact-card-value">LinkedIn</span>
-                  </span>
-                  <span class="contact-card-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="contact-card contact-profile-card" href="https://github.com/varunib" target="_blank" rel="noopener noreferrer">
-                  <span class="contact-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.51 0-1.22.44-2.22 1.15-3-.12-.29-.5-1.43.11-2.97 0 0 .94-.3 3.06 1.15a10.6 10.6 0 0 1 5.57 0c2.13-1.45 3.06-1.15 3.06-1.15.61 1.54.23 2.68.11 2.97.72.78 1.15 1.78 1.15 3 0 4.28-2.62 5.23-5.11 5.51.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
-                  </span>
-                  <span class="contact-card-copy">
-                    <span class="contact-card-label">CODE &amp; PROJECTS</span>
-                    <span class="contact-card-value">GitHub</span>
-                  </span>
-                  <span class="contact-card-arrow" aria-hidden="true">↗</span>
-                </a>
-              </div>
-
-              <p class="contact-resume">
-                <button class="resume-link-btn resume-trigger" type="button" aria-haspopup="dialog" aria-controls="resume-modal">
-                  Looking for my resume? <span>View &amp; Download PDF ↗</span>
-                </button>
-              </p>
-            </div>
-
-            <!-- INTERACTIVE CONTACT FORM -->
-            <div class="contact-form-side">
-              <div class="contact-form-container">
-                <div class="form-header">
-                  <h3 class="form-title">Send a Direct Message</h3>
-                  <span class="form-badge">⚡ Quick Response</span>
-                </div>
-                <form id="contact-form" class="contact-form" novalidate>
-                  <div class="form-row">
-                    <div class="form-field">
-                      <label for="form-name">Your Name <span class="required">*</span></label>
-                      <input type="text" id="form-name" name="name" placeholder="e.g. Jane Doe" autocomplete="name" required />
-                    </div>
-                    <div class="form-field">
-                      <label for="form-email">Email Address <span class="required">*</span></label>
-                      <input type="email" id="form-email" name="email" placeholder="jane@company.com" autocomplete="email" required />
-                    </div>
-                  </div>
-
-                  <div class="form-field">
-                    <label class="field-label-main">Inquiry Reason</label>
-                    <div class="topic-chips" role="radiogroup" aria-label="Inquiry Reason">
-                      <label class="topic-chip">
-                        <input type="radio" name="topic" value="Job Opportunity" checked />
-                        <span class="chip-text">💼 Job Offer</span>
-                      </label>
-                      <label class="topic-chip">
-                        <input type="radio" name="topic" value="Project Collaboration" />
-                        <span class="chip-text">🤝 Project</span>
-                      </label>
-                      <label class="topic-chip">
-                        <input type="radio" name="topic" value="General Inquiry" />
-                        <span class="chip-text">💬 General</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="form-field">
-                    <div class="field-label-wrap">
-                      <label for="form-message">Message <span class="required">*</span></label>
-                      <span class="char-counter" id="form-char-count">0 / 800</span>
-                    </div>
-                    <textarea id="form-message" name="message" rows="4" maxlength="800" placeholder="Hi Varuni, I came across your portfolio and would like to connect regarding..." required></textarea>
-                  </div>
-
-                  <button type="submit" class="btn btn-primary btn-submit-form" id="form-submit-btn">
-                    <span class="btn-text">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                      Send Message
-                    </span>
-                    <span class="btn-spinner" aria-hidden="true" hidden></span>
-                  </button>
-
-                  <div id="form-status" class="form-status" role="alert" aria-live="polite" hidden></div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <p class="footer-copy">© 2026 Varuni Bennur · Built with care.</p>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- RESUME MODAL -->
-    <div id="resume-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" hidden>
-      <div class="modal-dialog">
-        <div class="modal-header">
-          <div class="modal-title-group">
-            <h3 id="resume-modal-title">Varuni Bennur — Resume</h3>
-            <span class="modal-badge">PDF</span>
-          </div>
-          <div class="modal-actions">
-            <a class="btn btn-sm btn-primary" href="assets/Varuni_Bennur_Resume.pdf" download="Varuni_Bennur_Resume.pdf">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              Download PDF
-            </a>
-            <a class="btn btn-sm btn-outline" href="assets/Varuni_Bennur_Resume.pdf" target="_blank" rel="noopener noreferrer">
-              Open in Tab ↗
-            </a>
-            <button class="modal-close" type="button" aria-label="Close resume modal">✕</button>
-          </div>
-        </div>
-        <div class="modal-body">
-          <iframe src="assets/Varuni_Bennur_Resume.pdf#toolbar=0" title="Varuni Bennur Resume" class="resume-frame"></iframe>
         </div>
       </div>
+    </section>
+
+    <section class="section-grid" id="skills" aria-labelledby="skills-title">
+      <div class="section-title">
+        <p class="eyebrow">03 / Skills</p>
+        <h2 class="display" id="skills-title">Things I <span class="highlight">work with.</span></h2>
+      </div>
+      <div class="section-body skill-grid">
+        <article class="brutal skill-card">
+          <span class="skill-number" aria-hidden="true">01</span>
+          <h3 class="display">Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript (ES6+)</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML5 &amp; CSS3</span>
+            <span class="skill-pill">Bash / Shell</span>
+          </div>
+        </article>
+        <article class="brutal skill-card">
+          <span class="skill-number" aria-hidden="true">02</span>
+          <h3 class="display">Frontend &amp; Backend</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express.js</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">Next.js</span>
+            <span class="skill-pill">REST APIs</span>
+            <span class="skill-pill">Streamlit</span>
+          </div>
+        </article>
+        <article class="brutal skill-card">
+          <span class="skill-number" aria-hidden="true">03</span>
+          <h3 class="display">AI/ML &amp; Cloud</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">LangChain</span>
+            <span class="skill-pill">LangGraph</span>
+            <span class="skill-pill">RAG Pipelines</span>
+            <span class="skill-pill">OpenAI &amp; LLaMA</span>
+            <span class="skill-pill">ChromaDB</span>
+            <span class="skill-pill">AWS (EC2/S3)</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Supabase</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-grid" id="projects" aria-labelledby="projects-title">
+      <div class="section-title">
+        <p class="eyebrow">04 / Projects</p>
+        <h2 class="display" id="projects-title">Selected <span class="highlight">work.</span></h2>
+        <div class="project-filters" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active press" type="button" data-filter="all">All (3)</button>
+          <button class="filter-btn press" type="button" data-filter="ai">AI &amp; GenAI (2)</button>
+          <button class="filter-btn press" type="button" data-filter="fullstack">Full-Stack (2)</button>
+          <button class="filter-btn press" type="button" data-filter="cloud">Cloud &amp; DevOps (2)</button>
+        </div>
+      </div>
+      <div class="section-body project-grid">
+        <!-- Project 1: Voice AI Assistant -->
+        <article class="brutal card project-card-item" data-category="ai fullstack">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="mockup-dots" aria-hidden="true">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="mockup-title">voice-assistant-ui.png</span>
+              <span class="mockup-badge">Featured</span>
+            </div>
+            <div class="mockup-preview">
+              <img src="voice-ai.svg" alt="Voice AI Personal Assistant architecture and UI flow" class="mockup-img lightbox-trigger" data-full="voice-ai.svg" loading="lazy">
+              <span class="zoom-hint">Click to enlarge &#128269;</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <span class="project-number" aria-hidden="true">01</span>
+            <h3 class="display">Voice AI Personal Assistant</h3>
+            <p>Real-time voice assistant with dynamic info extraction, conversation persistence, and Google Calendar integration via OAuth 2.0. Built with OpenAI Whisper, GPT-4o-mini, and Supabase.</p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">Supabase</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-secondary press project-action-btn" href="https://github.com/varunib" target="_blank" rel="noopener">GitHub Code <span aria-hidden="true">&#8599;</span></a>
+              <a class="btn press project-action-btn" href="#hero">Live Demo <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: RAG Document Q&A System -->
+        <article class="brutal card project-card-item project-card-item--alt" data-category="ai cloud">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="mockup-dots" aria-hidden="true">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="mockup-title">rag-workspace-dashboard.png</span>
+              <span class="mockup-badge">GenAI / Agent</span>
+            </div>
+            <div class="mockup-preview">
+              <img src="rag-pipeline.svg" alt="RAG Document Q&A enterprise workspace interface and vector retrieval" class="mockup-img lightbox-trigger" data-full="rag-pipeline.svg" loading="lazy">
+              <span class="zoom-hint">Click to enlarge &#128269;</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <span class="project-number" aria-hidden="true">02</span>
+            <h3 class="display">RAG Document Q&amp;A System</h3>
+            <p>End-to-end RAG pipeline with document chunking, vector indexing, and semantic search. AI Agent built with LangGraph for dynamic query routing. Containerized and deployed on AWS.</p>
+            <div class="project-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Docker</span>
+              <span class="tag">AWS</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-secondary press project-action-btn" href="https://github.com/varunib" target="_blank" rel="noopener">GitHub Code <span aria-hidden="true">&#8599;</span></a>
+              <a class="btn press project-action-btn" href="#hero">Live Demo <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Air Quality Monitoring (In Active Development) -->
+        <article class="brutal card project-card-item project-card-item--third" data-category="fullstack cloud">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="mockup-dots" aria-hidden="true">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="mockup-title">aqi-forecast-dashboard.png</span>
+              <span class="mockup-badge mockup-badge--wip">&#128736;&#65039; In Development</span>
+            </div>
+            <div class="mockup-preview">
+              <img src="air-quality.svg" alt="Air Quality Monitoring dashboard and predictive trend forecast" class="mockup-img lightbox-trigger" data-full="air-quality.svg" loading="lazy">
+              <span class="zoom-hint">Click to enlarge &#128269;</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <span class="project-number" aria-hidden="true">03</span>
+            <h3 class="display">Air Quality Monitoring &amp; Forecasting</h3>
+            <p>Full-stack real-time AQI dashboard with live data from Open-Meteo API and 24&ndash;48 hour ML-based forecast visualization across Indian cities.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-secondary press project-action-btn" href="https://github.com/varunib" target="_blank" rel="noopener">GitHub Code <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-grid" id="contact" aria-labelledby="contact-title">
+      <div class="section-title">
+        <p class="eyebrow">05 / Contact</p>
+        <h2 class="display" id="contact-title">Let's <span class="highlight">connect.</span></h2>
+      </div>
+      <div class="section-body brutal card contact-card">
+        <p class="contact-intro">Open to Full-Time Software Engineering &amp; AI Developer roles. Based in Bengaluru &bull; Open to remote or relocation.</p>
+        
+        <div class="contact-links">
+          <button class="contact-link copy-email-btn press" id="copyEmailBtn" type="button" aria-label="Copy email to clipboard">
+            <span class="contact-link-icon" aria-hidden="true">&#128203;</span>
+            <span id="emailText">varunibennur7@gmail.com</span>
+            <span class="copy-pill" id="copyBadge">Copy</span>
+          </button>
+          <a class="contact-link press" href="mailto:varunibennur7@gmail.com">
+            <span class="contact-link-icon" aria-hidden="true">&#9993;</span>
+            Send Email
+          </a>
+          <a class="contact-link press" href="https://github.com/varunib" target="_blank" rel="noopener">
+            <span class="contact-link-icon" aria-hidden="true">&#8984;</span>
+            GitHub Profile
+          </a>
+          <a class="contact-link press" href="https://linkedin.com/in/varunibennur" target="_blank" rel="noopener">
+            <span class="contact-link-icon" aria-hidden="true">&#9673;</span>
+            LinkedIn Profile
+          </a>
+        </div>
+
+        <!-- Quick In-Browser Message Box -->
+        <div class="quick-message-box">
+          <h3 class="display quick-message-title">Send a Quick Note</h3>
+          <form class="brutal-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name</label>
+                <input type="text" id="senderName" name="name" class="brutal-input" placeholder="e.g. Alex Recruiter" required>
+              </div>
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Your Email</label>
+                <input type="email" id="senderEmail" name="email" class="brutal-input" placeholder="e.g. alex@company.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="senderMsg" class="form-label">Message</label>
+              <textarea id="senderMsg" name="message" class="brutal-input brutal-textarea" rows="4" placeholder="Hi Varuni, I'd like to discuss an opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn press form-submit-btn">
+              Send Message <span aria-hidden="true">&#8594;</span>
+            </button>
+            <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <a class="display brand" href="#hero">Varuni<span class="purple-dot">.</span></a>
+        <p>&copy; 2026 Varuni Bennur. <a href="#hero">Back to top &#8593;</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-label="Architecture image preview">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content brutal">
+      <div class="modal-header">
+        <span class="modal-title display" id="modalTitle">System Architecture View</span>
+        <button class="icon-btn modal-close press" id="modalClose" aria-label="Close image preview">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Enlarged project preview">
+      </div>
     </div>
-
-    <!-- BACK TO TOP BUTTON -->
-    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" hidden>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
-    </button>
-
-    <script type="module" src="script.js"></script>
-  </body>
+  </div>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast brutal" role="status" aria-live="polite">
+    <span class="toast-icon">&#10003;</span>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+</body>
 </html>
